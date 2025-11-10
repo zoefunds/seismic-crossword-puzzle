@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crossword Puzzle — Seismic Words</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="site-header">
+      <div class="title-wrap">
+        <!-- Replace "logo.svg" with your own logo file (PNG, SVG, etc.) -->
+        <img src="logo.jpg" alt="Seismic logo" class="logo" />
+
+        <div>
+          <h1>Seismic Crossword — Puzzle</h1>
+          <p class="lead">Fill the grid with the hidden words. Use keyboard or click to navigate.</p>
+      </div>
+
+      <div class="meta">
+        <div>Author: zoefunds</div>
+        <div class="small muted">Pure HTML • CSS • JavaScript</div>
+        <div id="timer" class="timer" aria-live="polite">Time: 00:00</div>
+      </div>
+    </header>
+
+    <section class="layout">
+      <section class="board">
+        <div id="grid" class="grid" aria-label="Crossword grid"></div>
+        <div class="toolbar">
+          <div class="btns">
+            <button id="checkBtn" class="btn">Check / Submit</button>
+            <button id="revealBtn" class="btn ghost">Reveal Word</button>
+            <button id="solveBtn" class="btn">Solve All</button>
+            <button id="resetBtn" class="btn ghost">Reset</button>
+            <button id="shareBtn" class="btn ghost" style="display:none">Share on Twitter</button>
+          </div>
+          <div class="hintline">
+            <span id="message" class="muted">Select a cell to begin. Use arrows to move.</span>
+          </div>
+        </div>
+      </section>
+
+      <aside class="controls">
+        <h2>Clues & Words</h2>
+        <div class="clues">
+          <div class="clue-group">
+            <h3>Across</h3>
+            <div id="acrossList" class="clue-list"></div>
+          </div>
+          <div class="clue-group">
+            <h3>Down</h3>
+            <div id="downList" class="clue-list"></div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;">
+          <strong>Controls</strong>
+          <ul>
+            <li>Type letters (auto-uppercase) — one per cell</li>
+            <li>Arrows to navigate, Backspace to delete/back</li>
+            <li>Click a clue to focus its first cell</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:12px;">
+          <strong>Legend</strong>
+          <div class="legend"><span class="key correct"></span> Correct & Locked</div>
+          <div class="legend"><span class="key incorrect"></span> Incorrect</div>
+          <div class="legend"><span class="key highlight"></span> Selected word</div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      Developed by <a href="https://x.com/BardoftheBlocks" target="_blank" rel="noopener">BardoftheBlocks</a>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
